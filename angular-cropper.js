@@ -94,13 +94,6 @@ angular.module('tw.directives.cropper').directive('twCropper', ['$parse', '$wind
                         y = 0;
                         scale = 1;
 
-                        // if (img.width > img.height) {
-                        //   maxScale = img.height / canvas.height;
-                        // } else {
-                        //   maxScale = img.width / canvas.width;
-
-                        // }
-                        // ==
                         if (img.width > img.height) {
                             maxScale = img.height / canvas.height;
                             scale = maxScale;
@@ -108,7 +101,7 @@ angular.module('tw.directives.cropper').directive('twCropper', ['$parse', '$wind
                             maxScale = img.width / canvas.width;
                             scale = maxScale;
                         }
-                        // ==
+                        
                         if (img.height < canvas.height) {
                             scale = minScale;
                             maxScale = scale;
